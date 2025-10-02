@@ -1,0 +1,310 @@
+{
+	"id": "cab0474d-0e76-4be0-bbde-acb756ebc5e8",
+	"name": "DemoShopping",
+	"timestamp": "2025-10-02T10:10:49.766Z",
+	"collection_id": "48799861-9393705c-cdd4-45c7-a45a-47518994974e",
+	"folder_id": 0,
+	"environment_id": "48799861-b65cacd2-44e0-475c-a6c7-2af3add41cc3",
+	"totalPass": 22,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-02T10:10:46.824Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "6e5b4ddc-ac92-433f-883d-13bc37becc21",
+			"name": "/add-product",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 345,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Status code is 200": true,
+				"Response contains success message": true,
+				"Response contains product ID": true,
+				"Product ID is a number": true,
+				"Price is positive": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Product ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price is positive": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				345
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Status code is 200": true,
+					"Response contains success message": true,
+					"Response contains product ID": true,
+					"Product ID is a number": true,
+					"Price is positive": true
+				}
+			]
+		},
+		{
+			"id": "8bc7275c-1c8d-4ebe-be33-480de002fc36",
+			"name": "/products",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Products list is not empty": true,
+				"First product has a name": true,
+				"Each product has product_id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Products list is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"First product has a name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each product has product_id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Products list is not empty": true,
+					"First product has a name": true,
+					"Each product has product_id": true
+				}
+			]
+		},
+		{
+			"id": "d9f3d037-3148-4cb0-b5a5-6738cf21593e",
+			"name": "/product by ID",
+			"url": "https://qa.demoshopping.ru/products/id/22332?product_id=22315",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has product object": true,
+				"Product has correct ID": false,
+				"Product has required fields": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has product object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Product has correct ID": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Product has required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has product object": true,
+					"Product has correct ID": false,
+					"Product has required fields": true
+				}
+			]
+		},
+		{
+			"id": "ca550019-7b72-4de9-a743-a501aab76571",
+			"name": "/update product",
+			"url": "https://qa.demoshopping.ru/products/id/22332",
+			"time": 326,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				326
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "18691352-1f77-4aae-ac17-44ee4d04d434",
+			"name": "/update product",
+			"url": "https://qa.demoshopping.ru/products/id/22332",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains success message": true,
+				"Request had 'name'": true,
+				"Request had 'price'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request had 'name'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request had 'price'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains success message": true,
+					"Request had 'name'": true,
+					"Request had 'price'": true
+				}
+			]
+		},
+		{
+			"id": "517d3637-c7f6-45df-a16d-4ab658faa86f",
+			"name": "/product by ID",
+			"url": "https://qa.demoshopping.ru/products/id/22332",
+			"time": 205,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Product really deleted (GET by id -> 404)": true,
+				"Second delete returns error 'not found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Product really deleted (GET by id -> 404)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Second delete returns error 'not found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Product really deleted (GET by id -> 404)": true,
+					"Second delete returns error 'not found'": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1450,
+	"collection": {
+		"requests": [
+			{
+				"id": "6e5b4ddc-ac92-433f-883d-13bc37becc21",
+				"method": "POST"
+			},
+			{
+				"id": "8bc7275c-1c8d-4ebe-be33-480de002fc36",
+				"method": "GET"
+			},
+			{
+				"id": "d9f3d037-3148-4cb0-b5a5-6738cf21593e",
+				"method": "GET"
+			},
+			{
+				"id": "ca550019-7b72-4de9-a743-a501aab76571",
+				"method": "PUT"
+			},
+			{
+				"id": "18691352-1f77-4aae-ac17-44ee4d04d434",
+				"method": "PATCH"
+			},
+			{
+				"id": "517d3637-c7f6-45df-a16d-4ab658faa86f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
